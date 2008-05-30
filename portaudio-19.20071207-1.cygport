@@ -1,0 +1,17 @@
+DESCRIPTION="Cross-platform audio API"
+HOMEPAGE="http://www.portaudio.com/"
+SRC_URI="http://www.portaudio.com/archives/pa_stable_v${PV//./_}.tar.gz"
+SRC_DIR="${PN}"
+
+DIFF_EXCLUDES="Makefile.in"
+
+CYGCONF_ARGS="
+	--enable-cxx
+	--disable-static
+	--without-alsa
+	--without-jack
+	--without-oss
+	--without-asihpi
+	--with-winapi=wmme
+"
+DOCS="V19-devel-readme.txt"

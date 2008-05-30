@@ -1,0 +1,96 @@
+portaudio
+-------------------------------------------
+PortAudio is a cross platform, open-source, audio I/O library proposed
+by Ross Bencina to the music-dsp mailing list. It lets you write simple
+audio programs in 'C' that will compile and run on Windows, Macintosh,
+Unix, BeOS. PortAudio is intended to promote the exchange of audio
+synthesis software between developers on different platforms.
+
+Runtime requirements:
+  cygwin-1.5.25-11
+
+Build requirements:
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20080523-1
+  cygport-0.3.11-1
+  gcc-core-3.3.3-3
+  gcc-g++-3.3.3-3
+  libtool-2.2.2-2
+  make-3.81-1
+  sed-4.1.5-2
+  w32api-3.11-1
+
+Canonical homepage:
+  http://www.portaudio.com/
+
+Canonical download:
+  http://www.portaudio.com/archives/
+
+-------------------------------------------
+
+Build instructions:
+  unpack portaudio-19.20071207-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./portaudio-19.20071207-1.cygport all
+
+This will create:
+  /usr/src/libportaudio2-19.20071207-1.tar.bz2
+  /usr/src/portaudio-19.20071207-1-src.tar.bz2
+  /usr/src/portaudio-19.20071207-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary packages:
+
+(portaudio)
+  /usr/share/doc/portaudio-19.20071207/LICENSE.txt
+  /usr/share/doc/portaudio-19.20071207/V19-devel-readme.txt
+
+(libportaudio2)
+  /usr/bin/cygportaudio-2.dll
+  /usr/bin/cygportaudiocpp-0.dll
+
+(libportaudio-devel)
+  /usr/include/portaudio.h
+  /usr/include/portaudiocpp/AutoSystem.hxx
+  /usr/include/portaudiocpp/BlockingStream.hxx
+  /usr/include/portaudiocpp/CFunCallbackStream.hxx
+  /usr/include/portaudiocpp/CallbackInterface.hxx
+  /usr/include/portaudiocpp/CallbackStream.hxx
+  /usr/include/portaudiocpp/CppFunCallbackStream.hxx
+  /usr/include/portaudiocpp/Device.hxx
+  /usr/include/portaudiocpp/DirectionSpecificStreamParameters.hxx
+  /usr/include/portaudiocpp/Exception.hxx
+  /usr/include/portaudiocpp/HostApi.hxx
+  /usr/include/portaudiocpp/InterfaceCallbackStream.hxx
+  /usr/include/portaudiocpp/MemFunCallbackStream.hxx
+  /usr/include/portaudiocpp/PortAudioCpp.hxx
+  /usr/include/portaudiocpp/SampleDataFormat.hxx
+  /usr/include/portaudiocpp/Stream.hxx
+  /usr/include/portaudiocpp/StreamParameters.hxx
+  /usr/include/portaudiocpp/System.hxx
+  /usr/include/portaudiocpp/SystemDeviceIterator.hxx
+  /usr/include/portaudiocpp/SystemHostApiIterator.hxx
+  /usr/lib/libportaudio.dll.a
+  /usr/lib/libportaudio.la
+  /usr/lib/libportaudiocpp.dll.a
+  /usr/lib/libportaudiocpp.la
+  /usr/lib/pkgconfig/portaudio-2.0.pc
+  /usr/lib/pkgconfig/portaudiocpp.pc
+
+------------------
+
+Port Notes:
+
+----- version 19.20071207-1 -----
+Major version bump.
+
+----- version 18.1-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
