@@ -37,7 +37,9 @@ Build instructions:
   cygport ./portaudio-19.20071207-1.cygport all
 
 This will create:
+  /usr/src/libportaudio-devel-19.20071207-1.tar.bz2
   /usr/src/libportaudio2-19.20071207-1.tar.bz2
+  /usr/src/libportaudiocpp0-19.20071207-1.tar.bz2
   /usr/src/portaudio-19.20071207-1-src.tar.bz2
   /usr/src/portaudio-19.20071207-1.tar.bz2
 
@@ -45,12 +47,12 @@ This will create:
 
 Files included in the binary packages:
 
-(portaudio)
+(libportaudio2)
+  /usr/bin/cygportaudio-2.dll
   /usr/share/doc/portaudio-19.20071207/LICENSE.txt
   /usr/share/doc/portaudio-19.20071207/V19-devel-readme.txt
 
-(libportaudio2)
-  /usr/bin/cygportaudio-2.dll
+(libportaudiocpp0)
   /usr/bin/cygportaudiocpp-0.dll
 
 (libportaudio-devel)
