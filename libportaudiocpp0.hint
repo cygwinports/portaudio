@@ -1,7 +1,7 @@
 category: Audio
-requires: cygwin
+requires: cygwin libgcc1 libportaudio2 libstdc++6
 external-source: portaudio
-sdesc: "Cross platform audio I/O library (runtime)"
+sdesc: "Cross platform audio I/O library (C++ runtime)"
 ldesc: "PortAudio is a free, cross platform, open-source, audio I/O 
 library.  It lets you write simple audio programs in 'C' that will 
 compile and run on many platforms including Windows, Macintosh (8,9,X), 
