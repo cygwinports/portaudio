@@ -1,5 +1,5 @@
 category: Audio
-requires: cygwin libportaudiocpp0 libportaudio-devel libstdc++6-devel
+requires: libportaudiocpp0 libportaudio-devel libstdc++6-devel
 external-source: portaudio
 sdesc: "Cross platform audio I/O library (C++ development)"
 ldesc: "PortAudio is a free, cross platform, open-source, audio I/O 
