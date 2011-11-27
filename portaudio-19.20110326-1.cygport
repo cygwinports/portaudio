@@ -1,11 +1,9 @@
 DESCRIPTION="Cross-platform audio API"
 HOMEPAGE="http://www.portaudio.com/"
-SRC_URI="http://www.portaudio.com/archives/pa_stable_v${PV//./_}.tar.gz"
+SRC_URI="http://www.portaudio.com/archives/pa_stable_v${PV//./_}.tgz"
 SRC_DIR="${PN}"
 
-PATCH_URI="20071207-cygwin.patch"
-
-PKG_NAMES="${PN} lib${PN}2 lib${PN}cpp0 lib${PN}-devel lib${PN}cpp-devel"
+PKG_NAMES="lib${PN}2 lib${PN}cpp0 lib${PN}-devel lib${PN}cpp-devel"
 libportaudio2_CONTENTS="usr/bin/cyg${PN}-2.dll usr/share/doc/"
 libportaudio_devel_CONTENTS="usr/include/portaudio.h usr/lib/libportaudio.* usr/lib/pkgconfig/portaudio-2.0.pc"
 libportaudiocpp0_CONTENTS="usr/bin/cyg${PN}cpp-0.dll"
