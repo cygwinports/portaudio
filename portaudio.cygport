@@ -1,5 +1,5 @@
 NAME="portaudio"
-VERSION=19.20110326
+VERSION=19.20140130
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="Cross platform audio I/O library"
@@ -11,6 +11,7 @@ software between developers on different platforms."
 HOMEPAGE="http://www.portaudio.com/"
 SRC_URI="http://www.portaudio.com/archives/pa_stable_v${VERSION//./_}.tgz"
 SRC_DIR=${NAME}
+PATCH_URI="19.20140130-parallel-make.patch"
 
 PKG_NAMES="lib${NAME}2 lib${NAME}cpp0 lib${NAME}-devel lib${NAME}cpp-devel"
 libportaudio2_CONTENTS="usr/bin/cyg${NAME}-2.dll usr/share/doc/"

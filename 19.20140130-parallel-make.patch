@@ -1,0 +1,11 @@
+--- origsrc/portaudio/Makefile.in	2011-11-10 22:06:17.000000000 -0600
++++ src/portaudio/Makefile.in	2014-03-31 22:26:01.453864700 -0500
+@@ -247,7 +247,7 @@
+ Makefile: Makefile.in config.status
+ 	$(SHELL) config.status
+ 
+-all-recursive:
++all-recursive: lib/$(PALIB)
+ 	if test -n "$(SUBDIRS)" ; then for dir in "$(SUBDIRS)"; do $(MAKE) -C $$dir all; done ; fi
+ 
+ install-recursive:
