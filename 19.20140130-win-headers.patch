@@ -1,0 +1,23 @@
+Audacity uses these headers
+
+--- origsrc/portaudio/configure.in	2017-07-20 04:09:09.859439900 -0500
++++ src/portaudio/configure.in	2017-07-20 12:40:00.033801800 -0500
+@@ -346,6 +346,7 @@ case "${host_os}" in
+ 
+         OTHER_OBJS="src/hostapi/wmme/pa_win_wmme.o src/os/win/pa_win_hostapis.o src/os/win/pa_win_util.o src/os/win/pa_win_waveformat.o"
+         CFLAGS="$CFLAGS -I\$(top_srcdir)/src/os/win -DPA_USE_DS=0 -DPA_USE_WDMKS=0 -DPA_USE_ASIO=0 -DPA_USE_WASAPI=0 -DPA_USE_WMME=1"
++        INCLUDES="$INCLUDES pa_win_wmme.h pa_win_waveformat.h"
+         LIBS="-lwinmm -lm"
+         PADLL="portaudio.dll"
+         THREAD_CFLAGS="-mthreads"
+--- origsrc/portaudio/Makefile.in	2017-07-20 04:09:10.024961600 -0500
++++ src/portaudio/Makefile.in	2017-07-20 14:40:21.200362400 -0500
+@@ -44,7 +44,7 @@
+ PAINC = include/portaudio.h
+ 
+ PA_LDFLAGS = $(LDFLAGS) $(SHARED_FLAGS) -rpath $(libdir) -no-undefined \
+-	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS)_.*" \
++	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS|PaWinDS|PaWinMME)_.*" \
+ 	     -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ 
+ COMMON_OBJS = \
