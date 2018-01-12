@@ -17,7 +17,7 @@ Audacity uses these headers
  
  PA_LDFLAGS = $(LDFLAGS) $(SHARED_FLAGS) -rpath $(libdir) -no-undefined \
 -	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS)_.*" \
-+	     -export-symbols-regex "(Pa|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS|PaWinDS|PaWinMME)_.*" \
++	     -export-symbols-regex "(Pa_|PaMacCore|PaJack|PaAlsa|PaAsio|PaOSS|PaUtil_GetTime|PaWinDS|PaWinMME).*" \
  	     -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
  
  COMMON_OBJS = \

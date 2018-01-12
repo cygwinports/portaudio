@@ -1,6 +1,6 @@
 NAME="portaudio"
 VERSION=19.20140130
-RELEASE=2
+RELEASE=3
 CATEGORY="Libs"
 SUMMARY="Cross platform audio I/O library"
 DESCRIPTION="PortAudio is a free, cross platform, open-source, audio I/O
